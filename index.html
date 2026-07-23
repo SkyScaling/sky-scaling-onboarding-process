@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onboarding Process | Sky Scaling</title>
+<meta name="description" content="The full Sky Scaling v3 client onboarding process, start to finish.">
+<meta name="theme-color" content="#06080F">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="https://assets.cdn.msgsndr.com/cIEiGPHzRWPAUucJJ6QA/media/63b8dfe3b7386074555ef2bb.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#06080F;--panel:#0E1220;--panel-2:#131829;
+    --border:rgba(148,160,196,0.14);--border-2:rgba(148,160,196,0.28);--border-strong:rgba(148,160,196,0.4);
+    --accent:#5271ff;--accent-2:#8f6bff;--accent-tint:rgba(82,113,255,0.13);
+    --grad:linear-gradient(135deg,#5271ff 0%,#8f6bff 100%);
+    --sales:#3ddc97;--sales-tint:rgba(61,220,151,0.14);--sales-border:rgba(61,220,151,0.5);
+    --client:#a98bff;--client-tint:rgba(143,107,255,0.16);--client-border:rgba(143,107,255,0.55);
+    --build:#5271ff;--build-tint:rgba(82,113,255,0.16);--build-border:rgba(82,113,255,0.55);
+    --csm:#f0a24a;--csm-tint:rgba(240,162,74,0.16);--csm-border:rgba(240,162,74,0.55);
+    --text:#F5F7FE;--text-2:#AEB7D0;--text-3:#727C99;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+  .bg-grid,.bg-glow{position:fixed;inset:0;pointer-events:none;z-index:0}
+  .bg-grid{background-image:linear-gradient(rgba(148,160,196,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(148,160,196,0.05) 1px,transparent 1px);background-size:54px 54px;-webkit-mask-image:radial-gradient(ellipse 95% 45% at 50% 0%,#000 25%,transparent 80%);mask-image:radial-gradient(ellipse 95% 45% at 50% 0%,#000 25%,transparent 80%)}
+  .bg-glow{background:radial-gradient(600px 420px at 14% 3%,rgba(82,113,255,0.16),transparent 66%),radial-gradient(600px 500px at 88% 35%,rgba(143,107,255,0.10),transparent 72%)}
+
+  header{position:relative;z-index:2;width:100%;border-bottom:1px solid var(--border)}
+  .hdr-inner{max-width:1280px;margin:0 auto;padding:18px clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:18px}
+  .logo img{height:32px;width:auto;display:block}
+  .logo .fb{display:none;color:var(--text)}
+  .pill{font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#c3ccff;border:1px solid var(--border);background:var(--accent-tint);padding:8px 15px;border-radius:999px;white-space:nowrap}
+
+  .wrap{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 clamp(16px,3.5vw,40px) 90px}
+  .eyebrow{text-align:center;color:var(--accent);font-family:'Space Grotesk';font-weight:700;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;margin:54px 0 16px}
+  h1.hero{text-align:center;font-weight:700;font-size:clamp(34px,5vw,52px);line-height:1.06;letter-spacing:-0.03em}
+  h1.hero .a{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;font-size:1.05em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{text-align:center;color:var(--text-2);font-size:16px;line-height:1.7;max-width:660px;margin:20px auto 0}
+  .legend{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+  .lg{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--text-2);font-weight:600}
+  .lg .d{width:11px;height:11px;border-radius:3px}
+  .lg.sales .d{background:var(--sales)} .lg.client .d{background:var(--client)} .lg.build .d{background:var(--build)} .lg.csm .d{background:var(--csm)}
+  .sec-lab{font-family:'Space Grotesk';font-weight:700;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-3);margin:62px 0 20px;text-align:center}
+
+  .roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:13px}
+  .role{border:1px solid var(--border);background:linear-gradient(180deg,var(--panel-2),var(--panel));border-radius:13px;padding:16px 18px}
+  .role h3{font-size:15px;font-weight:700;margin-bottom:6px}
+  .role p{color:var(--text-2);font-size:12.5px;line-height:1.5}
+  .team{margin-top:14px;border:1px solid rgba(82,113,255,0.34);background:linear-gradient(180deg,rgba(82,113,255,0.10),rgba(13,17,30,0.4));border-radius:13px;padding:18px 20px}
+  .team h3{font-size:13.5px;font-weight:700;margin-bottom:11px;color:#c3ccff}
+  .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px 22px}
+  .team-grid div{font-size:13px;color:var(--text-2)} .team-grid b{color:var(--text);font-weight:600}
+
+  /* ===== FLOWCHART ===== */
+  .fchart{position:relative;margin-top:8px}
+  .fchart::before{content:"";position:absolute;left:50%;top:22px;bottom:22px;width:2px;transform:translateX(-50%);background:var(--border-2);z-index:0}
+  .frow{position:relative;display:flex;align-items:center;justify-content:center;margin-bottom:48px;z-index:1}
+  .frow:last-child{margin-bottom:0}
+  .arrow{position:absolute;left:50%;transform:translate(-50%,-50%);width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid var(--border-strong);z-index:2;pointer-events:none}
+
+  .node{width:250px;flex:none;text-align:center;border-radius:15px;padding:16px 16px;position:relative;z-index:2;box-shadow:0 14px 34px -16px rgba(0,0,0,0.85)}
+  .node .nt{display:block;font-family:'Space Grotesk';font-weight:700;font-size:9.5px;letter-spacing:0.15em;text-transform:uppercase;opacity:0.85;margin-bottom:5px}
+  .node h3{font-family:'Space Grotesk';font-weight:700;font-size:15px;line-height:1.22;letter-spacing:-0.01em}
+  .node .cap{font-size:12px;line-height:1.45;margin-top:7px;opacity:0.82;font-weight:400;font-family:'Inter'}
+  .node.sales{background:linear-gradient(var(--sales-tint),var(--sales-tint)),#0b0f1a;border:1.5px solid var(--sales-border);color:#c8f7e2}
+  .node.client{background:linear-gradient(var(--client-tint),var(--client-tint)),#0b0f1a;border:1.5px solid var(--client-border);color:#dfd4ff}
+  .node.build{background:linear-gradient(var(--build-tint),var(--build-tint)),#0b0f1a;border:1.5px solid var(--build-border);color:#d6ddff}
+  .node.csm{background:linear-gradient(var(--csm-tint),var(--csm-tint)),#0b0f1a;border:1.5px solid var(--csm-border);color:#ffe0c0}
+
+  .panel{border:1px solid var(--border);background:var(--panel);border-radius:14px;padding:15px 17px;position:relative;z-index:2;box-shadow:0 22px 54px -40px rgba(0,0,0,0.9);width:340px;flex:none}
+  .panel.wide{width:580px;padding:24px 26px}
+  .conn{width:40px;height:2px;flex:none;background:var(--border-2);align-self:center;z-index:0}
+  .spacer{flex:none}
+  .panel .ph{font-family:'Space Grotesk';font-weight:700;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px}
+  .grps{display:grid;grid-template-columns:1fr;gap:15px}
+  .panel.wide .grps{display:block;column-count:2;column-gap:50px}
+  .panel.wide .grp{break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:22px}
+  .panel.wide .grp:last-child{margin-bottom:0}
+  .grp h4{font-family:'Space Grotesk';font-weight:700;font-size:12px;letter-spacing:0.02em;color:var(--text);margin-bottom:10px}
+  ul.chk{list-style:none}
+  ul.chk li{position:relative;padding-left:17px;color:var(--text-2);font-size:12.5px;line-height:1.5;margin:6px 0}
+  ul.chk li::before{content:"";position:absolute;left:0;top:6px;width:6px;height:6px;border-radius:2px;background:var(--accent)}
+  ul.chk ul{list-style:none;margin:3px 0 3px 3px}
+  ul.chk ul li{font-size:12px;color:var(--text-2)}
+  ul.chk ul li::before{width:5px;height:5px;border-radius:50%;background:var(--text-3);top:7px}
+
+  footer{text-align:center;color:var(--text-3);font-size:12.5px;padding:44px 0 0;border-top:1px solid var(--border);margin-top:70px;line-height:1.8}
+
+  @media (max-width:960px){
+    .fchart::before{left:19px;top:26px}
+    .frow{flex-direction:column;align-items:stretch;margin-bottom:34px}
+    .arrow{left:19px}
+    .node{width:auto;text-align:left;margin-left:44px}
+    .panel{width:auto;margin:12px 0 0 44px}
+    .panel.wide .grps{grid-template-columns:1fr}
+    .conn,.spacer{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="bg-grid"></div><div class="bg-glow"></div>
+
+<header><div class="hdr-inner">
+  <div class="logo"><img id="logo" alt="Sky Scaling" src="https://www.skyscaling.com/assets/sky-scaling-logo-vBi7C5xv.svg"><span class="fb">Sky Scaling</span></div>
+  <span class="pill">Internal SOP · v3</span>
+</div></header>
+
+<div class="wrap">
+  <div class="eyebrow">&lt; Internal · onboarding SOP &gt;</div>
+  <h1 class="hero">The <span class="a">Onboarding</span> Process</h1>
+  <p class="lead">The v3 install model, start to finish: sale, account, the client's onboarding course, the two-month build, launch, and the guarantee window.</p>
+
+  <div class="legend">
+    <span class="lg sales"><span class="d"></span>Sales</span>
+    <span class="lg client"><span class="d"></span>Client onboarding</span>
+    <span class="lg build"><span class="d"></span>Account &amp; build</span>
+    <span class="lg csm"><span class="d"></span>Calls &amp; live</span>
+  </div>
+
+  <div class="sec-lab">Agency Roles</div>
+  <div class="roles" id="roles"></div>
+  <div class="team"><h3>Typical high-performing setup (like yours)</h3><div class="team-grid" id="team"></div></div>
+
+  <div class="sec-lab">The Flow</div>
+  <div class="fchart" id="flow"></div>
+
+  <footer>Internal Sky Scaling onboarding SOP &middot; v3 install model &middot; &copy; <span id="yr"></span> Sky Scaling Inc.</footer>
+</div>
+
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+  var logo=document.getElementById('logo');
+  logo.onerror=function(){ logo.style.display='none'; document.querySelector('.logo .fb').style.display='inline-block'; };
+
+  var ROLES=[
+    ["Founder / Operator","Owns vision, sales strategy, offer, pricing, partnerships, and final decisions. Often closes deals."],
+    ["SDR (Sales Development Rep)","Handles inbound leads, follow ups, qualification, booking calls."],
+    ["Media Buyer","Launches and optimizes ads, budgets, creatives, pixels, reporting."],
+    ["CRM / Automation Specialist","Your \"CRM logistic guy.\" Builds funnels, forms, calendars, automations, SMS, email, AI, integrations."],
+    ["CSM (Client Success Manager)","Onboards clients, manages expectations, updates clients, protects retention."],
+    ["Video Editor / Creative Producer","UGC edits, ads, reels, thumbnails."],
+    ["Graphic Designer","Ad creatives, branding, PDFs, decks."],
+    ["Appointment Setter (Outbound)","Cold DMs, cold SMS, LinkedIn outreach."]
+  ];
+  var TEAM=[["Founder","Me"],["SDR","Luke"],["Media Buyer","Me"],
+    ["CRM / Automation Specialist","Me / Ivan Kim"],["CSM","Chris"],["Video Editor","John Camano"],["Appointment Setter","Me"]];
+
+  var STAGES=[
+    {phase:'sales', tag:'Lead', title:'New Lead', cap:'Setter / SDR calls the lead.'},
+    {phase:'sales', tag:'Booking', title:'Lead Books Appointment'},
+    {phase:'sales', tag:'Sales call', title:'Discovery &amp; Demo Call', cap:'Two-call close: discovery → strategy call.'},
+    {phase:'sales', tag:'Close', title:'They Sign', groups:[{label:'On the close', items:['Onboarding Form','Contract (Custom Field)','Payment']}]},
+
+    {phase:'build', tag:'Account', title:'Create Client’s Account',
+      groups:[
+        {label:'Account creation', items:['Create account','Add user to account (password &amp; roles)','Add Appointwise snapshot','Create Tracking Template (CF)','CSM calendar link (CF)']},
+        {label:'Appointwise', items:['Create account','Custom values']}]},
+    {phase:'build', tag:'Welcome', title:'Welcome SMS &amp; Email', cap:'Sent once the account exists.',
+      groups:[{label:'They receive', items:['Login credentials','Onboarding course access']}]},
+
+    {phase:'csm', tag:'Call · Zoom', title:'Onboarding Call (Zoom)', cap:'Explain the course and the next two months. That’s it.'},
+
+    {phase:'client', tag:'Course', title:'Client Goes Through the Onboarding Course',
+      groups:[
+        {label:'In the videos', items:['Watch the videos','Connect Google / Outlook, Zoom &amp; billing','Set calendar hours','Join the Discord community']},
+        {label:'Also submits', items:['Brand Strategy Form','Headshot + social handles','Their niche']}]},
+
+    {phase:'build', tag:'Setup call', title:'Setup Call',
+      groups:[{label:'Wire them up (screen share)', items:['Meta Business Manager created','Ad account + billing card','Domain purchased','Facebook Page created / claimed','Instagram → professional + connected','Partner access to Sky Scaling (Page, ad account, pixel)','Socials → GHL Social Planner (OAuth)','CRM login + mobile app tested','Test their calendar connection','Test their Zoom','Confirm billing is connected','Confirm calendar hours look good','Get their GHL phone number']}]},
+
+    {phase:'build', tag:'Build account', title:'Set-Up Client’s Account', wide:true, cap:'Needs their calendar, Zoom &amp; billing done first.',
+      groups:[
+        {label:'Business Profile', items:['General information','Business physical address','Authorized representative','General']},
+        {label:'Calendar', items:['Duplicate all calendars','Add client name','Add user','Meeting location']},
+        {label:'My Staff (edit user)', items:[{t:'User info', sub:['Headshot','Calendar','Signature']},{t:'User Availability', sub:['Timezone']}]},
+        {label:'Domain', items:['Add domain','Get professional email &amp; change business email (CF)','Confirm professional domain (SMS)']},
+        {label:'Email Services', items:['info.email.com']},
+        {label:'Automations', items:['Assign to user','Select calendar']},
+        {label:'Funnels', items:['Change step URL','Link domain','Link calendar']},
+        {label:'Appointwise', items:['Add to the “Appointwise” workflow','Update custom value to “Turn Off” after booking','Wait 0 seconds (only send 9-9)']}]},
+
+    {phase:'csm', tag:'Weekly call', title:'First Weekly Call — Brand Diagnostic', cap:'Confirm everything before we build.',
+      groups:[{label:'What we do (60 min)', items:['Go through their Brand Strategy Form out loud','Lock the niche','Extract their story &amp; positioning','Choose content pillars','Confirm their form &amp; everything is right before building']}]},
+
+    {phase:'build', tag:'Configure', title:'Configure the System', cap:'Set it up, once confirmed, before building.',
+      groups:[
+        {label:'Extra Steps', items:['Sub-Account / Subscription (PAUSE)','Charge domain','Phone number (Connect to user)','Confirm professional email']},
+        {label:'Setup', items:['Create their calendar page, thank-you page &amp; About Me page (Claude Cowork)','Calendar Name &amp; Description','Custom Values (URL\'s)','Automations (Strategy tag, 2 Hour reminder &amp; No show)','AI Strategy']}]},
+
+    {phase:'build', tag:'The build', title:'The 2-Month Build', wide:true, cap:'A weekly build call, each with a job.',
+      groups:[
+        {label:'Weekly build calls', items:[
+          {t:'Call 1 · System &amp; Funnels Walkthrough', sub:['Go through the built system &amp; funnels with them for approval','Watch a test lead run the funnel (form → AI → calendar)']},
+          {t:'Call 2 · Brand Reveal', sub:['Present the rebuilt profile: bio, highlights, 2 pinned posts, grid plan','Set up their IG bio, highlights &amp; pinned posts live','First carousels already up']},
+          {t:'Call 3 · Recording Training', sub:['Setup, lighting, delivery','They record a practice take, coached live','First 3 scripts delivered']},
+          {t:'Call 4 · Editing Training', sub:['Edit their first video together (CapCut, Captions)']},
+          {t:'Call 5 · Content Review + Hooks', sub:['Review their first published videos','What stops the scroll, iterate scripts']},
+          {t:'Call 6 · Ad Creative Session', sub:['Ads are separate from the organic posts','Ad creation discussion + give them the ad scripts','Pro edits where needed']},
+          {t:'Call 7 · Campaign Walkthrough', sub:['The campaign on screen: forms, targeting, copy','Guarantee terms re-read, tracking template trained']},
+          {t:'Call 8 · Launch Call', sub:['Final QA: page warm, grid full, funnel tested, billing verified','Launch date confirmed']}]},
+        {label:'We build alongside', items:['Socials built &amp; posting','Content (carousels &amp; graphics)','Video scripts + recording','Content calendar (so they know when to post)','Ad creative']}]},
+
+    {phase:'build', tag:'Launch prep', title:'Campaign Success List', cap:'Final launch checklist.',
+      groups:[{label:'Launch checklist', items:['Ads','Custom Fields','Connect instant form or submission link for recruiting (Check trigger)','Reconnect Appointwise w/ GHL','Subscriptions or next payment task','Excel “Leads Tracker”']}]},
+
+    {phase:'csm', tag:'Pre-launch', title:'Pre-Launch Meeting', cap:'Day before ads go live.',
+      groups:[{label:'On the call', items:['Walk through the Expectation Deck','Show how to use the tracking template','Show the ads + the system','Confirm video approach &amp; target province','Book 1st dial-in call &amp; mention cutoff','Send follow-up: Expectation Deck, tracking template, ad link, recap, next steps']}]},
+
+    {phase:'csm', tag:'Guarantee window', title:'Dial-In · Weekly CSM Calls', wide:true, cap:'Ad months 1-2 (months 3-4). Leads guaranteed.',
+      groups:[
+        {label:'Every weekly call (Calls 9-16)', items:['Review the numbers (spend, CPL, leads, booked, shown)','Lead quality from their side','Kill-or-keep creative decisions','New ad videos as creative fatigues','Follow-up discipline vs the tracking template']},
+        {label:'Checkpoints', items:['Call 12 — month-one review','Call 16 — the verdict &amp; graduation to steady state']}]},
+
+    {phase:'csm', tag:'Steady', title:'Steady State', cap:'Month 5+.',
+      groups:[{label:'Ongoing', items:['On-demand CSM calls ($50, pre-call audit)','Monthly numbers sent async','Pauses drop to the $250 base']}]}
+  ];
+
+  document.getElementById('roles').innerHTML = ROLES.map(function(r){return '<div class="role"><h3>'+r[0]+'</h3><p>'+r[1]+'</p></div>';}).join('');
+  document.getElementById('team').innerHTML = TEAM.map(function(t){return '<div><b>'+t[0]+':</b> '+t[1]+'</div>';}).join('');
+
+  function itemHTML(it){
+    if(typeof it==='string') return '<li>'+it+'</li>';
+    var h='<li>'+it.t;
+    if(it.sub&&it.sub.length){ h+='<ul>'+it.sub.map(function(s){return '<li>'+s+'</li>';}).join('')+'</ul>'; }
+    return h+'</li>';
+  }
+  function panelHTML(s){
+    var g='<div class="grps">'+s.groups.map(function(grp){
+      return '<div class="grp"><h4>'+grp.label+'</h4><ul class="chk">'+grp.items.map(itemHTML).join('')+'</ul></div>';
+    }).join('')+'</div>';
+    return '<div class="panel'+(s.wide?' wide':'')+'"><div class="ph">'+s.title.replace(/&amp;/g,'&')+'</div>'+g+'</div>';
+  }
+  var host=document.getElementById('flow'), side='right';
+  host.innerHTML = STAGES.map(function(s){
+    var node='<div class="node '+s.phase+'"><span class="nt">'+s.tag+'</span><h3>'+s.title+'</h3>'+(s.cap?'<div class="cap">'+s.cap+'</div>':'')+'</div>';
+    var inner=node;
+    if(s.groups){
+      var w=(s.wide?560:340)+40;
+      var sp='<div class="spacer" style="width:'+w+'px"></div>';
+      var cn='<div class="conn"></div>';
+      var pn=panelHTML(s);
+      inner = (side==='right') ? sp+node+cn+pn : pn+cn+node+sp;
+      side=(side==='right'?'left':'right');
+    }
+    return '<div class="frow">'+inner+'</div>';
+  }).join('');
+
+  function placeArrows(){
+    var old=host.querySelectorAll('.arrow'); for(var k=0;k<old.length;k++) old[k].remove();
+    var nodes=host.querySelectorAll('.node'); var cr=host.getBoundingClientRect();
+    for(var i=0;i<nodes.length-1;i++){
+      var a=nodes[i].getBoundingClientRect(), b=nodes[i+1].getBoundingClientRect();
+      var el=document.createElement('div'); el.className='arrow';
+      el.style.top=(((a.bottom+b.top)/2)-cr.top)+'px';
+      host.appendChild(el);
+    }
+  }
+  placeArrows();
+  window.addEventListener('resize', function(){ clearTimeout(window.__at); window.__at=setTimeout(placeArrows,120); });
+  window.addEventListener('load', placeArrows);
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(placeArrows); }
+})();
+</script>
+</body>
+</html>
