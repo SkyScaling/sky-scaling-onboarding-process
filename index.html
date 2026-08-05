@@ -165,10 +165,10 @@
         {label:'Account creation', items:['Create account','Add user to account (password &amp; roles)','Add Appointwise snapshot','Create Tracking Template (CF)','CSM calendar link (CF)']},
         {label:'Discord', items:['Create their private channel, named with their name','Add the team: Gabriel, their CSM, the video editor','Have it ready before they join so it&#39;s waiting for them']},
         {label:'Appointwise', items:['Create account','Custom values']}]},
-    {phase:'build', tag:'Welcome', title:'Welcome SMS &amp; Email', cap:'Sent once the account exists.',
-      groups:[{label:'They receive', items:['Login credentials','Onboarding course access']}]},
+    {phase:'build', tag:'Welcome', title:'Welcome SMS &amp; Email', cap:'Sent once the account exists. Login only, no course yet.',
+      groups:[{label:'They receive', items:['Login credentials','A nudge to log in and confirm it works before the call','A reminder to join the call from a laptop']}]},
 
-    {phase:'csm', tag:'Call · Zoom', title:'Onboarding Call (Zoom)', cap:'Explain the course and the next two months. That’s it.'},
+    {phase:'csm', tag:'Call · Zoom', title:'Onboarding Call (Zoom)', cap:'Explain the next two months, then hand them the course live. That’s it.'},
 
     {phase:'client', tag:'Course', title:'Client Goes Through the Onboarding Course',
       groups:[
@@ -177,7 +177,8 @@
         {label:'Their signal to us', items:['Messages their Discord channel when the course is done','That&#39;s our cue to book the setup call']}]},
 
     {phase:'build', tag:'Setup call', title:'Setup Call',
-      groups:[{label:'Wire them up (screen share)', items:['Meta Business Manager created','Ad account + billing card','Domain purchased','Facebook Page created / claimed','Instagram → professional + connected','Partner access to Sky Scaling (Page, ad account, pixel)','Socials → GHL Social Planner (OAuth)','CRM login + mobile app tested','Test their calendar connection','Test their Zoom','Confirm billing is connected','Confirm calendar hours look good','Get their GHL phone number','Confirm they&#39;re in Discord and can see their own channel','Confirm Discord notifications are on']}]},
+      groups:[{label:'Wire them up (screen share)', items:['Meta Business Manager created','Ad account + billing card','Domain purchased','Facebook Page created / claimed','Instagram → professional + connected','Partner access to Sky Scaling (Page, ad account, pixel)','Socials → GHL Social Planner (OAuth)','CRM login + mobile app tested','Test their calendar connection','Test their Zoom','Confirm billing is connected','Confirm calendar hours look good','Get their GHL phone number','Confirm they&#39;re in Discord and can see their own channel','Confirm Discord notifications are on']},
+        {label:'Before you hang up', items:['Book their Brand Diagnostic (60 min) live on the call','Nothing gets built until that call happens, so don&#39;t leave it to follow-up']}]},
 
     {phase:'build', tag:'Build account', title:'Set-Up Client’s Account', wide:true, cap:'Needs their calendar, Zoom &amp; billing done first.',
       groups:[
@@ -190,7 +191,8 @@
         {label:'Appointwise', items:['Add to the “Appointwise” workflow','Update custom value to “Turn Off” after booking','Wait 0 seconds (only send 9-9)']}]},
 
     {phase:'csm', tag:'Weekly call', title:'First Weekly Call — Brand Diagnostic', cap:'Confirm everything before we build.',
-      groups:[{label:'What we do (60 min)', items:['Go through their Brand Strategy Form out loud','Lock the niche','Extract their story &amp; positioning','Choose content pillars','Confirm their form &amp; everything is right before building']}]},
+      groups:[{label:'What we do (60 min)', items:['Go through their Brand Strategy Form out loud','Lock the niche','Extract their story &amp; positioning','Choose content pillars','Confirm their form &amp; everything is right before building']},
+        {label:'Before you hang up', items:['Book build call 1']}]},
 
     {phase:'build', tag:'Configure', title:'Configure the System', cap:'Set it up, once confirmed, before building.',
       groups:[
@@ -208,7 +210,8 @@
           {t:'Call 6 · Ad Creative Session', sub:['Ads are separate from the organic posts','Ad creation discussion + give them the ad scripts','Pro edits where needed']},
           {t:'Call 7 · Campaign Walkthrough', sub:['The campaign on screen: forms, targeting, copy','Guarantee terms re-read, tracking template trained']},
           {t:'Call 8 · Launch Call', sub:['Final QA: page warm, grid full, funnel tested, billing verified','Launch date confirmed']}]},
-        {label:'We build alongside', items:['Socials built &amp; posting','Content (carousels &amp; graphics)','Video scripts + recording','Content calendar (so they know when to post)','Ad creative']}]},
+        {label:'We build alongside', items:['Socials built &amp; posting','Content (carousels &amp; graphics)','Video scripts + recording','Content calendar (so they know when to post)','Ad creative']},
+        {label:'Before you hang up (every call)', items:['Book the next build call before you end the current one','Call 8 books the Pre-Launch Meeting']}]},
 
     {phase:'build', tag:'Launch prep', title:'Campaign Success List', cap:'Final launch checklist.',
       groups:[{label:'Launch checklist', items:['Ads','Custom Fields','Connect instant form or submission link for recruiting (Check trigger)','Reconnect Appointwise w/ GHL','Subscriptions or next payment task','Excel “Leads Tracker”']}]},
@@ -219,7 +222,8 @@
     {phase:'csm', tag:'Guarantee window', title:'Dial-In · Weekly CSM Calls', wide:true, cap:'Ad months 1-2 (months 3-4). Leads guaranteed.',
       groups:[
         {label:'Every weekly call (Calls 9-16)', items:['Review the numbers (spend, CPL, leads, booked, shown)','Lead quality from their side','Kill-or-keep creative decisions','New ad videos as creative fatigues','Follow-up discipline vs the tracking template']},
-        {label:'Checkpoints', items:['Call 12 — month-one review','Call 16 — the verdict &amp; graduation to steady state']}]},
+        {label:'Checkpoints', items:['Call 12 — month-one review','Call 16 — the verdict &amp; graduation to steady state']},
+        {label:'Before you hang up (every call)', items:['Book the next dial-in call before you end the current one','Call 16 is the exception, that one is graduation']}]},
 
     {phase:'csm', tag:'Steady', title:'Steady State', cap:'Month 5+.',
       groups:[{label:'Ongoing', items:['On-demand CSM calls ($50, pre-call audit)','Monthly numbers sent async','Pauses drop to the $250 base']}]}
