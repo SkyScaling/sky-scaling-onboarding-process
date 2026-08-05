@@ -70,6 +70,8 @@
   .node .nt{display:block;font-family:'Space Grotesk';font-weight:700;font-size:9.5px;letter-spacing:0.15em;text-transform:uppercase;opacity:0.85;margin-bottom:5px}
   .node h3{font-family:'Space Grotesk';font-weight:700;font-size:15px;line-height:1.22;letter-spacing:-0.01em}
   .node .cap{font-size:12px;line-height:1.45;margin-top:7px;opacity:0.82;font-weight:400;font-family:'Inter'}
+  .node .pstage{margin-top:11px;padding-top:9px;border-top:1px solid;border-color:currentColor;opacity:0.62;font-family:'Space Grotesk';font-weight:700;font-size:9.5px;letter-spacing:0.13em;text-transform:uppercase}
+  .node .pstage b{font-weight:700;opacity:0.6}
   .node.sales{background:linear-gradient(var(--sales-tint),var(--sales-tint)),#0b0f1a;border:1.5px solid var(--sales-border);color:#c8f7e2}
   .node.client{background:linear-gradient(var(--client-tint),var(--client-tint)),#0b0f1a;border:1.5px solid var(--client-border);color:#dfd4ff}
   .node.build{background:linear-gradient(var(--build-tint),var(--build-tint)),#0b0f1a;border:1.5px solid var(--build-border);color:#d6ddff}
@@ -158,29 +160,29 @@
     {phase:'sales', tag:'Lead', title:'New Lead', cap:'Setter / SDR calls the lead.'},
     {phase:'sales', tag:'Booking', title:'Lead Books Appointment'},
     {phase:'sales', tag:'Sales call', title:'Discovery &amp; Demo Call', cap:'Two-call close: discovery → strategy call.'},
-    {phase:'sales', tag:'Close', title:'They Sign', groups:[{label:'On the close', items:['Onboarding Form','Contract (Custom Field)','Payment']}]},
+    {phase:'sales', tag:'Close', title:'They Sign', stage:'Close Kit Sent', groups:[{label:'On the close', items:['Onboarding Form','Contract (Custom Field)','Payment']}]},
 
-    {phase:'build', tag:'Account', title:'Create Client’s Account',
+    {phase:'build', tag:'Account', title:'Create Client’s Account', stage:'Agreement &amp; Invoice Completed',
       groups:[
         {label:'Account creation', items:['Create account','Add user to account (password &amp; roles)','Add Appointwise snapshot','Create Tracking Template (CF)','CSM calendar link (CF)']},
         {label:'Discord', items:['Create their private channel, named with their name','Add the team: Gabriel, their CSM, the video editor','Have it ready before they join so it&#39;s waiting for them']},
         {label:'Appointwise', items:['Create account','Custom values']}]},
-    {phase:'build', tag:'Welcome', title:'Welcome SMS &amp; Email', cap:'Sent once the account exists. Login only, no course yet.',
+    {phase:'build', tag:'Welcome', title:'Welcome SMS &amp; Email', stage:'Onboarding Call', cap:'Sent once the account exists. Login only, no course yet.',
       groups:[{label:'They receive', items:['Login credentials','A nudge to log in and confirm it works before the call','A reminder to join the call from a laptop']}]},
 
-    {phase:'csm', tag:'Call · Zoom', title:'Onboarding Call (Zoom)', cap:'Explain the next two months, then hand them the course live. That’s it.'},
+    {phase:'csm', tag:'Call · Zoom', title:'Onboarding Call (Zoom)', stage:'Onboarding Call', cap:'Explain the next two months, then hand them the course live. That’s it.'},
 
-    {phase:'client', tag:'Course', title:'Client Goes Through the Onboarding Course',
+    {phase:'client', tag:'Course', title:'Client Goes Through the Onboarding Course', stage:'In the Onboarding Course',
       groups:[
         {label:'In the videos (16 modules, ~2h 40m)', items:['Watch the videos in order','Change password + bookmark the CRM','Connect Google / Outlook, Zoom &amp; billing','Set calendar hours (push for wide availability)','Download Lead Connector + turn on notifications','Join the Discord community','Download the Edits app']},
         {label:'Also submits', items:['Brand Strategy Form','Brand Assets Form (headshot + handles)','Ideally pre-creates their FB page &amp; IG so the setup call is spent improving, not creating']},
         {label:'Their signal to us', items:['Messages their Discord channel when the course is done','That&#39;s our cue to book the setup call']}]},
 
-    {phase:'build', tag:'Setup call', title:'Setup Call',
+    {phase:'build', tag:'Setup call', title:'Setup Call', stage:'Setup Call',
       groups:[{label:'Wire them up (screen share)', items:['Meta Business Manager created','Ad account + billing card','Domain purchased','Facebook Page created / claimed','Instagram → professional + connected','Partner access to Sky Scaling (Page, ad account, pixel)','Socials → GHL Social Planner (OAuth)','CRM login + mobile app tested','Test their calendar connection','Test their Zoom','Confirm billing is connected','Confirm calendar hours look good','Get their GHL phone number','Confirm they&#39;re in Discord and can see their own channel','Confirm Discord notifications are on']},
         {label:'Before you hang up', items:['Book their Brand Diagnostic (60 min) live on the call','Nothing gets built until that call happens, so don&#39;t leave it to follow-up']}]},
 
-    {phase:'build', tag:'Build account', title:'Set-Up Client’s Account', wide:true, cap:'Needs their calendar, Zoom &amp; billing done first.',
+    {phase:'build', tag:'Build account', title:'Set-Up Client’s Account', stage:'Setup Account (Ivan)', wide:true, cap:'Needs their calendar, Zoom &amp; billing done first.',
       groups:[
         {label:'Business Profile', items:['General information','Business physical address','Authorized representative','General']},
         {label:'Calendar', items:['Duplicate all calendars','Add client name','Add user','Meeting location']},
@@ -190,16 +192,16 @@
         {label:'Automations', items:['Assign to user','Select calendar']},
         {label:'Appointwise', items:['Add to the “Appointwise” workflow','Update custom value to “Turn Off” after booking','Wait 0 seconds (only send 9-9)']}]},
 
-    {phase:'csm', tag:'Weekly call', title:'First Weekly Call — Brand Diagnostic', cap:'Confirm everything before we build.',
+    {phase:'csm', tag:'Weekly call', title:'First Weekly Call — Brand Diagnostic', stage:'Setup Account (Ivan)', cap:'Confirm everything before we build.',
       groups:[{label:'What we do (60 min)', items:['Go through their Brand Strategy Form out loud','Lock the niche','Extract their story &amp; positioning','Choose content pillars','Confirm their form &amp; everything is right before building']},
         {label:'Before you hang up', items:['Book build call 1']}]},
 
-    {phase:'build', tag:'Configure', title:'Configure the System', cap:'Set it up, once confirmed, before building.',
+    {phase:'build', tag:'Configure', title:'Configure the System', stage:'Configure the System', cap:'Set it up, once confirmed, before building.',
       groups:[
         {label:'Extra Steps', items:['Sub-Account / Subscription (PAUSE)','Charge domain','Phone number (Connect to user)','Confirm professional email']},
         {label:'Setup', items:['Create their calendar page, thank-you page &amp; About Me page (Claude Cowork)','Calendar Name &amp; Description','Custom Values (URL\'s)','Automations (Strategy tag, 2 Hour reminder &amp; No show)','AI Strategy']}]},
 
-    {phase:'build', tag:'The build', title:'The 2-Month Build', wide:true, cap:'A weekly build call, each with a job.',
+    {phase:'build', tag:'The build', title:'The 2-Month Build', stage:'The 2-Month Build', wide:true, cap:'A weekly build call, each with a job.',
       groups:[
         {label:'Weekly build calls', items:[
           {t:'Call 1 · System &amp; Funnels Walkthrough', sub:['Go through the built system &amp; funnels with them for approval','Watch a test lead run the funnel (form → AI → calendar)']},
@@ -213,19 +215,19 @@
         {label:'We build alongside', items:['Socials built &amp; posting','Content (carousels &amp; graphics)','Video scripts + recording','Content calendar (so they know when to post)','Ad creative']},
         {label:'Before you hang up (every call)', items:['Book the next build call before you end the current one','Call 8 books the Pre-Launch Meeting']}]},
 
-    {phase:'build', tag:'Launch prep', title:'Campaign Success List', cap:'Final launch checklist.',
+    {phase:'build', tag:'Launch prep', title:'Campaign Success List', stage:'Campaign Success List', cap:'Final launch checklist.',
       groups:[{label:'Launch checklist', items:['Ads','Custom Fields','Connect instant form or submission link for recruiting (Check trigger)','Reconnect Appointwise w/ GHL','Subscriptions or next payment task','Excel “Leads Tracker”']}]},
 
-    {phase:'csm', tag:'Pre-launch', title:'Pre-Launch Meeting', cap:'Day before ads go live.',
+    {phase:'csm', tag:'Pre-launch', title:'Pre-Launch Meeting', stage:'Campaign Success List', cap:'Day before ads go live.',
       groups:[{label:'On the call', items:['Walk through the Expectation Deck','Show how to use the tracking template','Show the ads + the system','Confirm video approach &amp; target province','Book 1st dial-in call &amp; mention cutoff','Send follow-up: Expectation Deck, tracking template link + speed-to-lead / tracking template video, ad link, recap, next steps']}]},
 
-    {phase:'csm', tag:'Guarantee window', title:'Dial-In · Weekly CSM Calls', wide:true, cap:'Ad months 1-2 (months 3-4). Leads guaranteed.',
+    {phase:'csm', tag:'Guarantee window', title:'Dial-In · Weekly CSM Calls', stage:'Ads Live', wide:true, cap:'Ad months 1-2 (months 3-4). Leads guaranteed.',
       groups:[
         {label:'Every weekly call (Calls 9-16)', items:['Review the numbers (spend, CPL, leads, booked, shown)','Lead quality from their side','Kill-or-keep creative decisions','New ad videos as creative fatigues','Follow-up discipline vs the tracking template']},
         {label:'Checkpoints', items:['Call 12 — month-one review','Call 16 — the verdict &amp; graduation to steady state']},
         {label:'Before you hang up (every call)', items:['Book the next dial-in call before you end the current one','Call 16 is the exception, that one is graduation']}]},
 
-    {phase:'csm', tag:'Steady', title:'Steady State', cap:'Month 5+.',
+    {phase:'csm', tag:'Steady', title:'Steady State', stage:'Steady State', cap:'Month 5+.',
       groups:[{label:'Ongoing', items:['On-demand CSM calls ($50, pre-call audit)','Monthly numbers sent async','Pauses drop to the $250 base']}]}
   ];
 
@@ -246,7 +248,7 @@
   }
   var host=document.getElementById('flow'), side='right';
   host.innerHTML = STAGES.map(function(s){
-    var node='<div class="node '+s.phase+'"><span class="nt">'+s.tag+'</span><h3>'+s.title+'</h3>'+(s.cap?'<div class="cap">'+s.cap+'</div>':'')+'</div>';
+    var node='<div class="node '+s.phase+'"><span class="nt">'+s.tag+'</span><h3>'+s.title+'</h3>'+(s.cap?'<div class="cap">'+s.cap+'</div>':'')+(s.stage?'<div class="pstage"><b>Pipeline &middot;</b> '+s.stage+'</div>':'')+'</div>';
     var inner=node;
     if(s.groups){
       var w=(s.wide?560:340)+40;
