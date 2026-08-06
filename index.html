@@ -198,7 +198,7 @@
 
     {phase:'build', tag:'Configure', title:'Configure the System', stage:'Configure the System', cap:'Set it up, once confirmed, before building.',
       groups:[
-        {label:'Extra Steps', items:['Sub-Account / Subscription (PAUSE)','Charge domain','Phone number (Connect to user)','Confirm professional email']},
+        {label:'Extra Steps', items:['Sub-Account / Subscription (PAUSE)','Phone number (Connect to user)','Confirm professional email']},
         {label:'Setup', items:['Create their calendar page, thank-you page &amp; About Me page (Claude Cowork)','Calendar Name &amp; Description','Custom Values (URL\'s)','Automations (Strategy tag, 2 Hour reminder &amp; No show)','AI Strategy']}]},
 
     {phase:'build', tag:'The build', title:'The 2-Month Build', stage:'The 2-Month Build', wide:true, cap:'A weekly build call, each with a job.',
@@ -228,7 +228,7 @@
         {label:'Before you hang up (every call)', items:['Book the next dial-in call before you end the current one','Call 16 is the exception, that one is graduation']}]},
 
     {phase:'csm', tag:'Steady', title:'Steady State', stage:'Steady State', cap:'Month 5+.',
-      groups:[{label:'Ongoing', items:['On-demand CSM calls ($50, pre-call audit)','Monthly numbers sent async','Pauses drop to the $250 base']}]}
+      groups:[{label:'Ongoing', items:['On-demand CSM calls, no charge (do a pre-call audit first)','Monthly numbers sent async','Pauses drop to the $250 base']}]}
   ];
 
   document.getElementById('roles').innerHTML = ROLES.map(function(r){return '<div class="role"><h3>'+r[0]+'</h3><p>'+r[1]+'</p></div>';}).join('');
