@@ -165,12 +165,12 @@
     {phase:'build', tag:'Account', title:'Create Client’s Account', stage:'Agreement &amp; Invoice Completed',
       groups:[
         {label:'Account creation', items:['Create account','Add user to account (password &amp; roles)','Add Appointwise snapshot','Create Tracking Template (CF)','CSM calendar link (CF)']},
-        {label:'Discord', items:['Create their private channel, named with their name','Post the welcome message straight away (template 1 in Discord Message Templates.md)','Add the team: Gabriel, their CSM, the video editor']},
+        {label:'Discord', items:['Create their private channel, named with their name','Post the welcome message straight away (template 1 in Discord Message Templates.md)','Add the team: Gabriel and the video editor']},
         {label:'Appointwise', items:['Create account','Custom values']}]},
     {phase:'build', tag:'Welcome', title:'Welcome SMS &amp; Email', stage:'Onboarding Call', cap:'Sent once the account exists. Login only, no course yet.',
       groups:[{label:'They receive', items:['Login credentials','A nudge to log in and confirm it works before the call','A reminder to join the call from a laptop']}]},
 
-    {phase:'csm', tag:'Call · Zoom', title:'Onboarding Call (Zoom)', stage:'Onboarding Call', cap:'Explain the next two months, then hand them the course live. That’s it.'},
+    {phase:'csm', tag:'Call · Zoom', title:'Onboarding Call (Zoom)', stage:'Onboarding Call', cap:'Walk them through their build, then hand them the course live. That’s it.'},
 
     {phase:'client', tag:'Course', title:'Client Goes Through the Onboarding Course', stage:'In the Onboarding Course',
       groups:[
@@ -228,7 +228,7 @@
         {label:'Before you hang up (every call)', items:['Book the next working session before you end the current one','Call 16 is the exception, that one is graduation']}]},
 
     {phase:'csm', tag:'Steady', title:'Steady State', stage:'Steady State', cap:'After the first two ad months.',
-      groups:[{label:'Ongoing', items:['On-demand CSM calls, no charge (do a pre-call audit first)','Monthly numbers sent async','Pauses drop to the $150 base']}]}
+      groups:[{label:'Ongoing', items:['On-demand support calls, no charge (do a pre-call audit first)','Monthly numbers sent async','Pauses drop to the $150 base']}]}
   ];
 
   document.getElementById('roles').innerHTML = ROLES.map(function(r){return '<div class="role"><h3>'+r[0]+'</h3><p>'+r[1]+'</p></div>';}).join('');
