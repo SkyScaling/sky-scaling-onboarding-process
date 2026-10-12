@@ -145,16 +145,16 @@
 
   var ROLES=[
     ["Founder / Operator","Owns vision, sales strategy, offer, pricing, partnerships, and final decisions. Often closes deals."],
-    ["SDR (Sales Development Rep)","Handles inbound leads, follow ups, qualification, booking calls."],
+    ["SDR (Sales Development Rep)","Handles inbound leads, follow-ups, qualification, booking calls."],
     ["Media Buyer","Launches and optimizes ads, budgets, creatives, pixels, reporting."],
-    ["CRM / Automation Specialist","Your \"CRM logistic guy.\" Builds funnels, forms, calendars, automations, SMS, email, AI, integrations."],
+    ["CRM / Automation Specialist","Your CRM and automation person. Builds funnels, forms, calendars, automations, SMS, email, AI, integrations."],
     ["CSM (Client Success Manager)","Onboards clients, manages expectations, updates clients, protects retention."],
     ["Video Editor / Creative Producer","UGC edits, ads, reels, thumbnails."],
     ["Graphic Designer","Ad creatives, branding, PDFs, decks."],
     ["Appointment Setter (Outbound)","Cold DMs, cold SMS, LinkedIn outreach."]
   ];
   var TEAM=[["Founder","Me"],["SDR","Luke"],["Media Buyer","Me"],
-    ["CRM / Automation Specialist","Me / Ivan Kim"],["CSM","Chris"],["Video Editor","John Camano"],["Appointment Setter","Me"]];
+    ["CRM / Automation Specialist","Me"],["CSM","Me"],["Video Editor","John Camano"],["Appointment Setter","Me"]];
 
   var STAGES=[
     {phase:'sales', tag:'Lead', title:'New Lead', cap:'Setter / SDR calls the lead.'},
@@ -182,7 +182,7 @@
       groups:[{label:'Wire them up (screen share)', items:['Meta Business Manager created','Facebook Page created / claimed','Instagram → professional + connected','Ad account created','Dataset (pixel) created in THEIR ad account, never ours','Send the pixel ID to Gabriel','Billing information added','Partner access to Sky Scaling (Page, ad account, dataset)','CRM login + mobile app tested','Socials → GHL Social Planner (OAuth)','Confirm billing is connected','Get their GHL phone number','Confirm calendar hours look good','Test their calendar connection','Test their Zoom','Confirm they&#39;re in Discord and can see their own channel','Confirm Discord notifications are on']},
         {label:'Before you hang up', items:['Book their Brand Diagnostic (60 min) live on the call','Nothing gets built until that call happens, so don&#39;t leave it to follow-up']}]},
 
-    {phase:'build', tag:'Build account', title:'Set-Up Client’s Account', stage:'Setup Account (Ivan)', wide:true, cap:'Needs their calendar, Zoom &amp; billing done first.',
+    {phase:'build', tag:'Build account', title:'Set-Up Client’s Account', stage:'Account Setup', wide:true, cap:'Needs their calendar, Zoom &amp; billing done first.',
       groups:[
         {label:'Business Profile', items:['General information','Business physical address','Authorized representative','General']},
         {label:'Calendar', items:['Duplicate all calendars','Add client name','Add user','Meeting location']},
@@ -192,7 +192,7 @@
         {label:'Automations', items:['Assign to user','Select calendar']},
         {label:'Appointwise', items:['Add to the “Appointwise” workflow','Update custom value to “Turn Off” after booking','Wait 0 seconds (only send 9-9)']}]},
 
-    {phase:'csm', tag:'Weekly call', title:'First Weekly Call · Brand Diagnostic', stage:'Setup Account (Ivan)', cap:'Confirm everything before we build.',
+    {phase:'csm', tag:'Weekly call', title:'First Weekly Call · Brand Diagnostic', stage:'Account Setup', cap:'Confirm everything before we build.',
       groups:[{label:'What we do (60 min)', items:['Go through their Brand Strategy Form out loud','Lock the niche','Extract their story &amp; positioning','Choose content pillars','Confirm their form &amp; everything is right before building']},
         {label:'Before you hang up', items:['Book build call 1']}]},
 
@@ -221,13 +221,13 @@
     {phase:'csm', tag:'Pre-launch', title:'Pre-Launch Meeting', stage:'Campaign Success List', cap:'Day before ads go live.',
       groups:[{label:'On the call', items:['Walk through the Expectation Deck','Show how to use the tracking template','Show the ads + the system','Confirm video approach &amp; target province or state','Book 1st working session &amp; mention cutoff','Send follow-up: Expectation Deck, tracking template link + speed-to-lead / tracking template video, ad link, recap, next steps']}]},
 
-    {phase:'csm', tag:'Guarantee window', title:'Weekly Working Sessions', stage:'Ads Live', wide:true, cap:'Ad months 1-2 (months 3-4). Leads guaranteed.',
+    {phase:'csm', tag:'Guarantee window', title:'Weekly Working Sessions', stage:'Ads Live', wide:true, cap:'First two ad months. Leads guaranteed.',
       groups:[
         {label:'Every weekly call (Calls 9-16)', items:['Review the numbers (spend, CPL, leads, booked, shown)','Lead quality from their side','Kill-or-keep creative decisions','New ad videos as creative fatigues','Follow-up discipline vs the tracking template']},
         {label:'Checkpoints', items:['Call 12 · month-one review','Call 16 · the verdict &amp; graduation to steady state']},
         {label:'Before you hang up (every call)', items:['Book the next working session before you end the current one','Call 16 is the exception, that one is graduation']}]},
 
-    {phase:'csm', tag:'Steady', title:'Steady State', stage:'Steady State', cap:'Month 5+.',
+    {phase:'csm', tag:'Steady', title:'Steady State', stage:'Steady State', cap:'After the first two ad months.',
       groups:[{label:'Ongoing', items:['On-demand CSM calls, no charge (do a pre-call audit first)','Monthly numbers sent async','Pauses drop to the $150 base']}]}
   ];
 
