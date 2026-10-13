@@ -72,6 +72,8 @@
   .node .cap{font-size:12px;line-height:1.45;margin-top:7px;opacity:0.82;font-weight:400;font-family:'Inter'}
   .node .pstage{margin-top:11px;padding-top:9px;border-top:1px solid;border-color:currentColor;opacity:0.62;font-family:'Space Grotesk';font-weight:700;font-size:9.5px;letter-spacing:0.13em;text-transform:uppercase}
   .node .pstage b{font-weight:700;opacity:0.6}
+  .node .skill{margin-top:10px;padding:7px 9px;border-radius:9px;background:rgba(124,140,255,0.16);border:1px solid rgba(150,165,255,0.45);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;line-height:1.4;color:#eef0ff;word-break:break-word}
+  .node .skill span{display:block;font-family:'Space Grotesk';font-weight:700;font-size:9.5px;letter-spacing:0.13em;text-transform:uppercase;color:#aeb8ff;margin-bottom:2px}
   .node.sales{background:linear-gradient(var(--sales-tint),var(--sales-tint)),#0b0f1a;border:1.5px solid var(--sales-border);color:#c8f7e2}
   .node.client{background:linear-gradient(var(--client-tint),var(--client-tint)),#0b0f1a;border:1.5px solid var(--client-border);color:#dfd4ff}
   .node.build{background:linear-gradient(var(--build-tint),var(--build-tint)),#0b0f1a;border:1.5px solid var(--build-border);color:#d6ddff}
@@ -161,7 +163,7 @@
     {phase:'sales', tag:'Sales call', title:'Discovery &amp; Demo Call', cap:'Two-call close: discovery → strategy call.'},
     {phase:'sales', tag:'Close', title:'They Sign', stage:'Close Kit Sent', groups:[{label:'On the close', items:['Onboarding Form','Contract (Custom Field)','Payment']}]},
 
-    {phase:'build', tag:'Account', title:'Create Client’s Account', stage:'Agreement &amp; Invoice Completed',
+    {phase:'build', tag:'Account', title:'Create Client’s Account', stage:'Agreement &amp; Invoice Completed', skill:'sky-scaling-create-clients-account',
       groups:[
         {label:'Account creation', items:['Create account','Add user to account (password &amp; roles)','Add Appointwise snapshot','Create Tracking Template (CF)']},
         {label:'Discord', items:['Create their private channel, named with their name','Post the welcome message straight away (template 1 in Discord Message Templates.md)','Add the team: Gabriel and the video editor']},
@@ -181,12 +183,12 @@
       groups:[{label:'Wire them up (screen share)', items:['Meta Business Manager created','Facebook Page created / claimed','Instagram → professional + connected','Ad account created','Dataset (pixel) created in THEIR ad account, never ours','Send the pixel ID to Gabriel','Billing information added','Partner access to Sky Scaling (Page, ad account, dataset)','CRM login + mobile app tested','Socials → GHL Social Planner (OAuth)','Confirm billing is connected','Get their GHL phone number','Confirm calendar hours look good','Test their calendar connection','Test their Zoom','Confirm they&#39;re in Discord and can see their own channel','Confirm Discord notifications are on']},
         {label:'Before you hang up', items:['Book their Brand Diagnostic (60 min) live on the call','Nothing gets built until that call happens, so don&#39;t leave it to follow-up']}]},
 
-    {phase:'build', tag:'Build account', title:'Set-Up Client’s Account', stage:'Account Setup', wide:true, cap:'Needs their calendar, Zoom &amp; billing done first.',
+    {phase:'build', tag:'Build account', title:'Set-Up Client’s Account', stage:'Account Setup', wide:true, cap:'Needs their calendar, Zoom &amp; billing done first.', skill:'sky-scaling-set-up-clients-account',
       groups:[
         {label:'Business Profile', items:['General information','Business physical address','Authorized representative','General']},
         {label:'Calendar', items:['Duplicate all calendars','Add client name','Add user','Meeting location']},
         {label:'My Staff (edit user)', items:[{t:'User info', sub:['Headshot','Calendar','Signature']},{t:'User Availability', sub:['Timezone']}]},
-        {label:'Domain', items:['Purchase domain','Add domain','Get professional email &amp; change business email (CF)','Confirm professional domain (SMS)']},
+        {label:'Domain', items:['Purchase domain','Get professional email &amp; change business email','Confirm professional domain (Discord)']},
         {label:'Email Services', items:['info.email.com']},
         {label:'Automations', items:['Assign to user','Select calendar']},
         {label:'Appointwise', items:['Add to the “Appointwise” workflow','Update custom value to “Turn Off” after booking','Wait 0 seconds (only send 9-9)']}]},
@@ -247,7 +249,7 @@
   }
   var host=document.getElementById('flow'), side='right';
   host.innerHTML = STAGES.map(function(s){
-    var node='<div class="node '+s.phase+'"><span class="nt">'+s.tag+'</span><h3>'+s.title+'</h3>'+(s.cap?'<div class="cap">'+s.cap+'</div>':'')+(s.stage?'<div class="pstage"><b>Pipeline &middot;</b> '+s.stage+'</div>':'')+'</div>';
+    var node='<div class="node '+s.phase+'"><span class="nt">'+s.tag+'</span><h3>'+s.title+'</h3>'+(s.cap?'<div class="cap">'+s.cap+'</div>':'')+(s.skill?'<div class="skill"><span>Claude does this with skill</span>'+s.skill+'</div>':'')+(s.stage?'<div class="pstage"><b>Pipeline &middot;</b> '+s.stage+'</div>':'')+'</div>';
     var inner=node;
     if(s.groups){
       var w=(s.wide?560:340)+40;
