@@ -202,25 +202,37 @@
         {label:'Extra Steps', items:['Sub-Account / Subscription (PAUSE)','Phone number (Connect to user)','Confirm professional email']},
         {label:'Setup', items:['Get their pixel ID from Gabriel first. Every page gets their pixel, never the FinanceBridges one.','Create their 5 pages: calendar, thank-you, About Me, pre-call form &amp; pre-call thank-you (Claude Cowork)','Build their pre-call form in their sub-account','Set the form&rsquo;s redirect to their pre-call thank-you page','Calendar Name &amp; Description','Custom Values (URL\'s, incl. About Me page &amp; pre-call form)','Automations','AI Strategy']}]},
 
-    {phase:'build', tag:'The build', title:'The 2-Month Build', stage:'The 2-Month Build', wide:true, cap:'A weekly build call, each with a job.',
+    {phase:'build', tag:'Full Install', title:'The 2-Month Build', stage:'The 2-Month Build', wide:true, cap:'Full Install only. A weekly call, each with one job. We edit their videos.',
       groups:[
         {label:'Weekly build calls', items:[
-          {t:'Call 1 · System &amp; Funnels Walkthrough', sub:['Go through the built system &amp; funnels with them for approval','Watch a test lead run the funnel (form → AI → calendar)']},
-          {t:'Call 2 · Brand Reveal', sub:['Present the rebuilt profile: bio, highlights, 2 pinned posts, grid plan','Set up their IG bio, highlights &amp; pinned posts live','First carousels already up']},
-          {t:'Call 3 · Recording Training', sub:['Setup, lighting, delivery','They record a practice take, coached live','First 3 scripts delivered','Assign their booking + thank-you page videos']},
-          {t:'Call 4 · Editing Training', sub:['Edit their first video together in the Edits app (trim, captions, publish)']},
-          {t:'Call 5 · Content Review + Hooks', sub:['Review their first published videos','What stops the scroll, iterate scripts','Review their booking + thank-you page videos']},
-          {t:'Call 6 · Ad Creative Session', sub:['Ads are separate from the organic posts','Ad creation discussion + give them the ad scripts','Pro edits where needed']},
-          {t:'Call 7 · Campaign Walkthrough', sub:['The campaign on screen: forms, targeting, copy','Guarantee terms re-read, tracking template trained']},
-          {t:'Call 8 · Launch Call', sub:['Final QA: page warm, grid full, funnel tested, billing verified','Launch date confirmed']}]},
-        {label:'We build alongside', items:['Socials built &amp; posting','Content (carousels &amp; graphics)','Video scripts + recording','Content calendar (so they know when to post)','Ad creative']},
-        {label:'Before you hang up (every call)', items:['Book the next build call before you end the current one','Call 8 books the Pre-Launch Meeting']}]},
+          {t:'Week 1 &middot; Funnels + Brand Reveal', sub:['Walk through their 5 pages and their CRM','Present the rebuilt profile: bio, highlights, 2 pinned posts, grid plan','Set their IG bio, highlights &amp; pinned posts live on the call','Hand over their booking + thank-you page video scripts']},
+          {t:'Week 2 &middot; Recording Session', sub:['First organic video scripts delivered','Setup, lighting, delivery','They record a practice take, coached live','First carousels go up this week']},
+          {t:'Weeks 3 to 5 &middot; Content Review', sub:['Their first posted videos: what stops the scroll, better hooks','Next scripts every week','Approve their booking + thank-you page videos (we edit them and put them on the pages)']},
+          {t:'Week 6 &middot; Ad Scripts + Recording', sub:['Ads are separate from the organic posts','Hand over the ad scripts, they record them','We edit the ads']},
+          {t:'Week 7 &middot; Campaign Walkthrough', sub:['The campaign on screen: ads, instant form, targeting, copy']},
+          {t:'Week 8 &middot; Pre-Launch Meeting', sub:['Live test lead, tracking template, launch date (see the Pre-Launch Meeting box)']}]},
+        {label:'We build alongside', items:['Socials built &amp; posting (carousels)','Organic video scripts','We edit their videos for the first 8 weeks (no editing training)','Content calendar (so they know when to post)','Ad scripts + ad edits','Campaign + instant form']},
+        {label:'Before you hang up (every call)', items:['Book the next build call before you end the current one','Week 7 books the Pre-Launch Meeting']}]},
+
+    {phase:'build', tag:'Fast-Track', title:'The Fast-Track Build', stage:'The 2-Month Build', wide:true, cap:'Fast-Track only. Their socials already work, so we don&rsquo;t touch them. Ads live in weeks 2 to 4.',
+      groups:[
+        {label:'Scripts (right after the Brand Diagnostic)', items:['Ad scripts + booking &amp; thank-you page video scripts','One PDF in their own brand colours and fonts: how to record + the scripts','Gabriel reviews first, then the client']},
+        {label:'They record', items:['Ads: one vertical take','Page videos: one horizontal take','Upload to their Videos folder in Drive']},
+        {label:'Weekly calls', items:[
+          {t:'Week 1 &middot; Funnels Walkthrough', sub:['Walk through their 5 pages and their CRM','How a lead flows: ad, form, AI, calendar']},
+          {t:'Week 2 &middot; Video Review', sub:['Page videos edited first and put on their pages','Ad edits in their brand look, 1 to 2 rounds of changes']},
+          {t:'Then the Pre-Launch Meeting', sub:['Campaign walkthrough + live test lead (see the Pre-Launch Meeting box)']}]},
+        {label:'We build', items:['Page video + ad edits','Campaign + instant form','Form connected to their CRM trigger + AI']},
+        {label:'Before you hang up (every call)', items:['Book the next call before you end the current one']}]},
 
     {phase:'build', tag:'Launch prep', title:'Campaign Success List', stage:'Campaign Success List', cap:'Final launch checklist.',
       groups:[{label:'Launch checklist', items:['Ads','Confirm every page fires THEIR pixel','Custom Fields','Connect instant form or submission link for recruiting (Check trigger)','Reconnect Appointwise w/ GHL','Subscriptions or next payment task','Excel “Leads Tracker”']}]},
 
-    {phase:'csm', tag:'Pre-launch', title:'Pre-Launch Meeting', stage:'Campaign Success List', cap:'Day before ads go live.',
-      groups:[{label:'On the call', items:['Walk through the Expectation Deck','Show how to use the tracking template','Show the ads + the system','Confirm video approach &amp; target province or state','Book 1st working session &amp; mention cutoff','Send follow-up: Expectation Deck, tracking template link + speed-to-lead / tracking template video, ad link, recap, next steps']}]},
+    {phase:'csm', tag:'Pre-launch', title:'Pre-Launch Meeting', stage:'Campaign Success List', cap:'Day before ads go live. Both paths end here.',
+      groups:[
+        {label:'Before the call', items:['Billing set up from their signed agreement','Guarantee checkpoint + verdict dates ready']},
+        {label:'On the call', items:['Walk through the campaign: ads, instant form, targeting, copy','Live test lead: form &rarr; AI &rarr; calendar, and the &ldquo;New Lead&rdquo; notification hits their phone','How to handle a lead: call from your own phone, let the AI text, call unbooked leads daily','Tracking template + how-to video','Walk through the Expectation Deck','Guarantee terms + billing from their signed agreement','Bank heads-up: Meta&rsquo;s first small charges can get the card blocked, call the bank','Confirm target province or state, launch date','Book 1st working session &amp; mention cutoff']},
+        {label:'After the call', items:['Send follow-up: Expectation Deck, tracking template link + video, ad link, recap, next steps','Move them to Ads Live when ads start']}]},
 
     {phase:'csm', tag:'Guarantee window', title:'Weekly Working Sessions', stage:'Ads Live', wide:true, cap:'First two ad months. Leads guaranteed.',
       groups:[
