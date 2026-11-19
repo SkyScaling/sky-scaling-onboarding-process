@@ -245,7 +245,12 @@
         {label:'Before you hang up (every call)', items:['Book the next working session before you end the current one','The week 8 call is the exception, that one is graduation']}]},
 
     {phase:'csm', tag:'Steady', title:'Steady State', stage:'Steady State', cap:'After the first two ad months.',
-      groups:[{label:'Ongoing', items:['On-demand support calls, no charge (do a pre-call audit first)','Monthly numbers sent async','Pauses drop to the $150 base']}]}
+      groups:[{label:'Ongoing', items:['On-demand support calls, no charge (do a pre-call audit first)','Monthly numbers sent async','Pauses drop to the $150 base']}]},
+
+    {phase:'build', tag:'New campaign', title:'Campaign Switch', stage:'Ads Live', cap:'Client changes audience or offer. Do it in this order.',
+      groups:[
+        {label:'In this order', items:['New ad scripts approved, videos recorded and edited (the base for everything below)','Calendar name &amp; description','Custom values','Funnel copy: every page, About Me included (check the page videos still fit)','Pre-call form questions fit the new audience','Automations','AI strategy','Ads: new campaign, ad set, ads + instant form (draft)','Custom fields (one per form question)','Connect the instant form (map the fields, check the trigger)']},
+        {label:'Switch day', items:['Test lead: form &rarr; CRM &rarr; AI &rarr; calendar','Turn off the old campaign when the new one goes live','Confirm every page still fires THEIR pixel','Walk the client through what changed']}]}
   ];
 
   document.getElementById('roles').innerHTML = ROLES.map(function(r){return '<div class="role"><h3>'+r[0]+'</h3><p>'+r[1]+'</p></div>';}).join('');
